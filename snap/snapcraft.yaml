@@ -9,7 +9,7 @@ confinement: devmode # use 'strict' once you have the right plugs and slots
 
 apps:
   play-1984:
-    command: hello/bin 
+    command: bin/hello
 
 parts:
   gnu-hello:
