@@ -20,6 +20,6 @@ parts:
   hello:
     plugin: nil
     organize:
-      bin/hello: usr/bin/hello
+      usr/bin/hello: bin/hello
     stage-packages:
       - hello
