@@ -10,16 +10,22 @@ architectures:
   - amd64
 
 apps:
-  play-1984:
+  play-1984: # This app name is arbitrary, but it's better if it matches the snap name.
     command: bin/hello # This command has to match the command coming out of the part build.
 
 parts:
+# ===========================================================================
+# Part from source looks like this:
+#
 #  gnu-hello:
 #    source: http://ftp.gnu.org/gnu/hello/hello-2.10.tar.gz
 #    plugin: autotools
-  hello:
+#
+# I guess a part-from-source always creates the binary in bin/<part>?
+# =========================================================================== 
+  deb-hello:
     plugin: nil
     organize:
-      usr/bin/hello: bin/hello
+      usr/bin/hello: bin/hello # L side -> path in package, R side -> desired path in snap.
     stage-packages:
       - hello
