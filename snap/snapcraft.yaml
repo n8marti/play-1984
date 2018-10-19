@@ -1,0 +1,17 @@
+name: snap-play # you probably want to 'snapcraft register <name>'
+version: '0.1' # just for humans, typically '1.2+git' or '1.3.2'
+summary: Just trying out things to get a feel for it # 79 char long summary
+description: |
+  Just trying out things to get a feel for it
+
+grade: devel # must be 'stable' to release into candidate/stable channels
+confinement: devmode # use 'strict' once you have the right plugs and slots
+
+apps:
+  snap-play:
+    command: hello/bin 
+
+parts:
+  snap-play:
+    source: http://ftp.gnu.org/gnu/hello/hello-2.10.tar.gz
+    plugin: autotools
