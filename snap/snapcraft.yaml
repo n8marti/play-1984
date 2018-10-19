@@ -6,12 +6,17 @@ description: |
 
 grade: devel # must be 'stable' to release into candidate/stable channels
 confinement: devmode # use 'strict' once you have the right plugs and slots
+architectures:
+  - amd64
 
 apps:
   play-1984:
     command: bin/hello
 
 parts:
-  gnu-hello:
-    source: http://ftp.gnu.org/gnu/hello/hello-2.10.tar.gz
-    plugin: autotools
+#  gnu-hello:
+#    source: http://ftp.gnu.org/gnu/hello/hello-2.10.tar.gz
+#    plugin: autotools
+  hello:
+    stage-packages:
+      - hello
