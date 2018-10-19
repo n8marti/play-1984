@@ -11,7 +11,7 @@ architectures:
 
 apps:
   play-1984:
-    command: bin/hello
+    command: usr/bin/hello
 
 parts:
 #  gnu-hello:
