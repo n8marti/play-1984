@@ -11,7 +11,7 @@ architectures:
 
 apps:
   play-1984:
-    command: usr/bin/hello
+    command: bin/hello # This command has to match the command coming out of the part build.
 
 parts:
 #  gnu-hello:
@@ -19,5 +19,7 @@ parts:
 #    plugin: autotools
   hello:
     plugin: nil
+    organize:
+      bin/hello: usr/bin/hello
     stage-packages:
       - hello
